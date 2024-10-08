@@ -1,4 +1,3 @@
-// api/index.js
 const fetch = require('node-fetch');
 
 module.exports = async (req, res) => {
@@ -15,6 +14,7 @@ module.exports = async (req, res) => {
         if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
         
         const html = await response.text(); // Get HTML as text
+        res.setHeader('Content-Type', 'text/html'); // Set content type to HTML
         res.send(html); // Send HTML back in response
     } catch (error) {
         res.status(500).send(`Error fetching HTML: ${error.message}`);
