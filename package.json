@@ -1,12 +1,9 @@
 {
-  "name": "fetch-html-api",
+  "name": "htmlviewermate",
   "version": "1.0.0",
   "description": "An API to fetch HTML from specified URLs",
   "main": "index.js",
   "dependencies": {
     "node-fetch": "^2.6.1"
-  },
-  "scripts": {
-    "start": "node index.js"
   }
 }
